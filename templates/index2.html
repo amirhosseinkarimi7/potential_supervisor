@@ -1,0 +1,61 @@
+<link href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
+<div class="bz-table__wrapper">
+
+		<div class="bz-table-header__wrapper">
+
+			<table class="bz-table bz-table-head">
+				<colgroup>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+				</colgroup>
+			</table>
+
+		</div>
+
+		<div class="bz-table-body__wrapper">
+
+			<table class="bz-table bz-table-body">
+				<colgroup>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+				</colgroup>
+<thead>
+            <tr>
+                <th>ID</th>
+                <th>University</th>
+                <th>Department</th>
+                <th>Name</th>
+                <th>ResearchArea</th>
+                <th>Publications</th>
+                <th>E-mail</th>
+                </tr>
+        </thead>
+ <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row.uid }}</td>
+                <td>{{ row.uni }}</td>
+                <td>{{row.dept}}</td>
+                <td>{{row.name}}</td>
+                <td>{{row.ra}}</td>
+                <td>{{row.pub}}</td>
+                <td>{{row.email}}</td> </tr>
+            {% endfor %}
+        </tbody>
+			</table>
+
+		
+
+	</div>
